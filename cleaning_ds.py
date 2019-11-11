@@ -54,4 +54,4 @@ df_clean = other_beers(df_combine, 'style', list_uniq)
 
 
 
-df_clean.to_csv('Outputs/combine_code_cc.csv')
+df_clean.to_csv('Outputs/combine_code_cc.csv', index = False)

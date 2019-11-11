@@ -31,7 +31,7 @@ df_breweries.rename(columns = {'Unnamed: 0': 'brewery_id',
 df_combine = pd.merge(df_beers, df_breweries, how = 'inner', on = 'brewery_id')
 DF_drop_by_indx (df_combine, 'brewery_id', 1)
 
-df_combine.to_csv('Outputs/combine_code.csv')
+df_combine.to_csv('Outputs/combine_code.csv', index = False)
 
 
 

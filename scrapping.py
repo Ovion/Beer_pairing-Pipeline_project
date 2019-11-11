@@ -63,7 +63,7 @@ change_list = ['Old Ale', 'Sweet Stout', 'Wheat Ale', 'Double / Imperial IPA',
 
 change_val(df_scrapp, 'Estilo', list_change, change_list)
 
-df_scrapp.to_csv('Outputs/scrapp_code.csv')
+df_scrapp.to_csv('Outputs/scrapp_code.csv', index = False)
 
 
 
