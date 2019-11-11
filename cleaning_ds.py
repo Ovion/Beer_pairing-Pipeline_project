@@ -9,7 +9,7 @@ def sub_to_nothing (df, column, lstcc):
 
 def change_val (df, column, lst_ch, ch_lst):
     for i, e in enumerate (lst_ch):
-        df.loc[(df[column] == e)] = ch_lst[i]
+        df.loc[(df[column] == e), column] = ch_lst[i]
     return df
 
 # No me funciona value_counts así que me la creo:
@@ -31,3 +31,4 @@ lst_change = ['IPA', 'Pilsener', 'Pale Wheat Ale']
 change_lst = ['India Pale Ale', 'Pilsner', 'Wheat Ale']
 change_val(df_combine, 'style', lst_change, change_lst)
 
+df_combine.to_csv('Outputs/combine_code_cc.csv')

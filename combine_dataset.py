@@ -9,8 +9,8 @@ def DF_drop_by_indx(df, lst, indx):
 
 
 # En primer lugar mi data set consta de 2 .csv
-df_beers = pd.read_csv('Pipeline_Project/Inputs/beers.csv')
-df_breweries = pd.read_csv('Pipeline_Project/Inputs/breweries.csv')
+df_beers = pd.read_csv('Inputs/beers.csv')
+df_breweries = pd.read_csv('Inputs/breweries.csv')
 
 # Limpieza básica del df_beers
 lst_colmn_beers = ['abv', 'ibu', 'Unnamed: 0', 'id']
@@ -31,7 +31,7 @@ df_breweries.rename(columns = {'Unnamed: 0': 'brewery_id',
 df_combine = pd.merge(df_beers, df_breweries, how = 'inner', on = 'brewery_id')
 DF_drop_by_indx (df_combine, 'brewery_id', 1)
 
-df_combine.to_csv('Pipeline_Project/Outputs/combine_code.csv')
+df_combine.to_csv('Outputs/combine_code.csv')
 
 
 
