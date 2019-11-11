@@ -17,3 +17,11 @@ def get_ds_cerveceria (tipo, estado, df=df_cc):
     con las cervezas del tipo presentes en una cervecería'''
     df_out = df_cc.loc [(df_cc['state']==estado)&(df_cc['style']==tipo)]
     return df_out
+
+def get_lst_states (df=df_cc):
+    lst_states = set([e for e in df['state']])
+    return lst_states
+
+def get_lst_beers (df=df_cc):
+    lst_beers = set([e for e in df['style']])
+    return lst_beers
