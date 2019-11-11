@@ -12,6 +12,12 @@ def change_val (df, column, lst_ch, ch_lst):
         df.loc[(df[column] == e), column] = ch_lst[i]
     return df
 
+def other_beers (df, column, lst_uni):
+    for e in df[column]:
+        if e not in lst_uni:
+            df.loc[(df[column] == e), column] = 'Others'
+    return df
+
 # No me funciona value_counts así que me la creo:
 def unique_val_count (df, column):
     dicti={}
@@ -23,12 +29,29 @@ def unique_val_count (df, column):
 df_combine = pd.read_csv('Outputs/combine.csv')
 
 lst_cc = ['\(.+\)','American','Belgian','Baltic','Berliner','English',
-          'German','Czech','Euro','Munich','Viena','^\s','\s$']
+          'German','Czech','Euro','Munich','Irish','Russian','^\s','\s$']
 
 df_combine = sub_to_nothing(df_combine, 'style', lst_cc)
 
-lst_change = ['IPA', 'Pilsener', 'Pale Wheat Ale']
-change_lst = ['India Pale Ale', 'Pilsner', 'Wheat Ale']
+lst_change = ['IPA', 'Pilsener', 'Pale Wheat Ale', 'Extra Special / Strong Bitter', 'Irish Red Ale',
+             'Scottish Ale', 'Scotch Ale', 'Tripel', 'Dark Ale', 'Milk / Sweet Stout',
+             'Double / Imperial Stout', 'Maibock / Helles Bock', 'Vienna Lager', 'Dunkel Lager', 'Dunkelweizen',
+             'Bock']
+
+change_lst = ['India Pale Ale', 'Pilsner', 'Wheat Ale', 'British-Style Bitter', 'Amber / Red Ale',
+             'Scotch Ale / Wee Heavy', 'Scotch Ale / Wee Heavy', 'Abbey Tripel', 'Old Ale', 'Sweet Stout',
+             'Imperial Stout', 'Helles', 'Vienna', 'Dunkel', 'Dunkel',
+             'Maibock / Pale Bock']
+
 change_val(df_combine, 'style', lst_change, change_lst)
 
-df_combine.to_csv('Outputs/combine_code_cc.csv')
+df_scrpp = pd.read_csv('Outputs/scrapp_code.csv')
+
+list_uniq = [e for e in df_scrpp['Estilo']]
+
+df_clean = other_beers(df_combine, 'style', list_uniq)
+
+
+
+
+df_clean.to_csv('Outputs/combine_code_cc.csv')
