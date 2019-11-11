@@ -4,6 +4,7 @@ import pandas as pd
 import re
 
 import Src.datasets as ds
+import Src.pdf as pdf
 
 def parse():
     parser = argparse.ArgumentParser() #Analizador de argumentos
@@ -13,7 +14,7 @@ def parse():
     grupo.add_argument ('-c', '--cerv', help='Dado un tipo de cerveza y un estado de USA te indico la cervecería y el maridaje de dicha cerveza', action='store_true')
 
     parser.add_argument('state', help='Siglas del estado de USA (ver reedme), e.g. "CA" para California', type=str)
-	parser.add_argument('style', help='Tipo de cerveza (ver reedme), e.g. "Pale Ale"', type=str)
+    parser.add_argument('style', help='Tipo de cerveza (ver reedme), e.g. Pale Ale', type=str)
 
     return parser.parse_args()
 
@@ -23,14 +24,17 @@ def main():
     print(args)
     print ('\n ----- \n')
     if args.cerv:
-        df_maridaje = get_ds_maridaje (args.style)
-        print ('Tabla de maridaje:\n', df_maridaje)
+        df_maridaje = ds.get_ds_maridaje (args.style)
+        print ("Tabla de maridaje: \n")
+        print (df_maridaje)
         print ('\n ----- \n')
-        df_cerv = get_ds_cerveceria (args.style, args.state)
-        print ('Tabla de cervecerías:\n', df_cerv)
+        df_cerv = ds.get_ds_cerveceria (args.style, args.state)
+        print ("Tabla de cervecerías: \n")
+        print (df_cerv)
+        pdf.create_pdf(df_maridaje, df_cerv, args.state)
     else:
         print ('Error: se requiere un argumento para realizar la accion.')
-        
+
 if __name__ == '__main__':
     main()
 

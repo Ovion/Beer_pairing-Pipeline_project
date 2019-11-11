@@ -16,3 +16,4 @@ def get_ds_cerveceria (tipo, estado, df=df_cc):
     '''Dado un estado y un tipo de cerveza te devuelve un dataframe
     con las cervezas del tipo presentes en una cervecería'''
     df_out = df_cc.loc [(df_cc['state']==estado)&(df_cc['style']==tipo)]
+    return df_out
