@@ -3,6 +3,34 @@ import os
 import pandas as pd
 import re
 
+import Src.datasets as ds
+
+def parse():
+    parser = argparse.ArgumentParser() #Analizador de argumentos
+    grupo = parser.add_mutually_exclusive_group() # grupo mutuamente excluyente (solo una operacion)
+
+#    grupo.add_argument ('-maridaje', help='Dado un tipo de cerveza, te indico con qué va bien', action='store_true')
+    grupo.add_argument ('-c', '--cerv', help='Dado un tipo de cerveza y un estado de USA te indico la cervecería y el maridaje de dicha cerveza', action='store_true')
+
+    parser.add_argument('state', help='Siglas del estado de USA (ver reedme), e.g. "CA" para California', type=str)
+	parser.add_argument('style', help='Tipo de cerveza (ver reedme), e.g. "Pale Ale"', type=str)
+
+    return parser.parse_args()
+
+
+def main():
+    args=parse()
+    print(args)
+    print ('\n ----- \n')
+    if args.cerv:
+        df_maridaje = get_ds_maridaje (args.style)
+        print ('Tabla de maridaje:\n', df_maridaje)
+        print ('\n ----- \n')
+        df_cerv = get_ds_cerveceria (args.style, args.state)
+        print ('Tabla de cervecerías:\n', df_cerv)
+    else:
+        print ('Error: se requiere un argumento para realizar la accion.')
+        
 if __name__ == '__main__':
     main()
 
