@@ -45,13 +45,14 @@ change_lst = ['India Pale Ale', 'Pilsner', 'Wheat Ale', 'British-Style Bitter', 
 
 change_val(df_combine, 'style', lst_change, change_lst)
 
+lst_cc_state = ['^\s']
+df_combine = sub_to_nothing(df_combine, 'state', lst_cc_state)
+
 df_scrpp = pd.read_csv('Outputs/scrapp_code.csv')
 
 list_uniq = [e for e in df_scrpp['Estilo']]
 
 df_clean = other_beers(df_combine, 'style', list_uniq)
-
-
 
 
 df_clean.to_csv('Outputs/combine_code_cc.csv', index = False)
