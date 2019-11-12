@@ -12,7 +12,7 @@ Para ampliar información realicé un 'scrappeo' de una [página web de maridaje
 
 Una vez sacados todos los datos realicé una limpieza de dichos datos, el orden de ejecución sería el siguiente:
 1. combine_dataset.py
-  En este combino los dos dataset de nombres de cerveza y cervecerías en único dataset
+..En este combino los dos dataset de nombres de cerveza y cervecerías en único dataset
 2. scrapping.py
   En este otro realizo el scrapp de la página web
 3.cleaning_ds.py
