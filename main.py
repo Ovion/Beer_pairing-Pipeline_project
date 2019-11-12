@@ -48,7 +48,7 @@ def main():
         df_cerv = ds.get_ds_cerveceria (args.style, args.state)
         print ("Tabla de cervecerías: \n")
         print (df_cerv)
-        pdf.create_pdf(df_maridaje, df_cerv, args.state)
+        # pdf.create_pdf(df_maridaje, df_cerv, args.state)
     else:
         print ('Error: se requiere un argumento para realizar la accion.')
 
