@@ -12,18 +12,18 @@ Para ampliar información realicé un 'scrappeo' de una [página web de maridaje
 
 Una vez sacados todos los datos realicé una limpieza de dichos datos, el orden de ejecución sería el siguiente:
 1. combine_dataset.py
-⋅⋅⋅En este combino los dos dataset de nombres de cerveza y cervecerías en único dataset
+  En este combino los dos dataset de nombres de cerveza y cervecerías en único dataset
 2. scrapping.py
-⋅⋅⋅En este otro realizo el scrapp de la página web
+  En este otro realizo el scrapp de la página web
 3.cleaning_ds.py
-⋅⋅⋅Aquí realizo la limpieza de ambos dataset
+  Aquí realizo la limpieza de ambos dataset
 
 Hasta aquí todo es crear una serie de datos que utilizaré en mi función main.py
 
 ### main.py
 Esta función toma una "función" en este caso -c o --cerv y toma dos valores:
 state: el cual debe ser las siglas de un estado de EEUU, los parámetros válidos son:
-⋅⋅⋅
+  
 
 
 
