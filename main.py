@@ -7,6 +7,7 @@ import Src.datasets as ds
 import Src.pdf as pdf
 
 def valid_state(c):
+    '''Validación de un estado perteneciente a los EEUU '''
     lst_state = ds.get_lst_states()
     if c in lst_state:
         return c
@@ -15,6 +16,7 @@ def valid_state(c):
         raise argparse.ArgumentTypeError(sms)
 
 def valid_beer(c):
+    '''Validación de un tipo de cerveza que está en mi base de datos '''
     lst_beer = ds.get_lst_beers()
     if c in lst_beer:
         return c
@@ -46,7 +48,7 @@ def main():
         df_cerv = ds.get_ds_cerveceria (args.style, args.state)
         print ("Tabla de cervecerías: \n")
         print (df_cerv)
-        pdf.create_pdf(df_maridaje, df_cerv, args.state)
+        # pdf.create_pdf(df_maridaje, df_cerv, args.state)
     else:
         print ('Error: se requiere un argumento para realizar la accion.')
 

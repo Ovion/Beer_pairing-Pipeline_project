@@ -19,9 +19,11 @@ def get_ds_cerveceria (tipo, estado, df=df_cc):
     return df_out
 
 def get_lst_states (df=df_cc):
+    '''Obtención de la lista de estados que tengo en mi base de datos '''
     lst_states = set([e for e in df['state']])
     return lst_states
 
 def get_lst_beers (df=df_cc):
+    '''Obtención de la lista de tipo de cerveza que hay en mi base de datos '''
     lst_beers = set([e for e in df['style']])
     return lst_beers

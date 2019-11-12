@@ -1,0 +1,60 @@
+Namespace(cerv=True, state='CA', style='Pale Ale')
+
+ ----- 
+
+Tabla de maridaje: 
+
+     Estilo                                          Platos  \
+4  Pale Ale  Pastel de carne, quesos ingleses, hamburgesas.   
+
+                                             Postres  \
+4  Flan de calabaza, budín de pan de miel, banan...   
+
+                                      Quesos Temperatura      Vaso/Copa  
+4  Ingleses como Cheddar o Derby con salvia.   10-13 °C.  Pinta Nonick.  
+
+ ----- 
+
+Tabla de cervecerías: 
+
+                                 name     style  ounces  \
+24                    Bitter American  Pale Ale    12.0   
+33             Bitter American (2011)  Pale Ale    12.0   
+102               Keebarlin' Pale Ale  Pale Ale    12.0   
+118      Poleeko Gold Pale Ale (2009)  Pale Ale    12.0   
+279                Aftermath Pale Ale  Pale Ale    12.0   
+487     Mucho Aloha Hawaiian Pale Ale  Pale Ale    12.0   
+692          Sprocket Pale Ale (2006)  Pale Ale    12.0   
+1271               Manzanita Pale Ale  Pale Ale    12.0   
+1314  Back in the Saddle Rye Pale Ale  Pale Ale    12.0   
+1373                      Cortez Gold  Pale Ale    32.0   
+1375   El Conquistador Extra Pale Ale  Pale Ale    32.0   
+1386                           Oneida  Pale Ale    16.0   
+1395      Monkey Paw Oatmeal Pale Ale  Pale Ale    16.0   
+1646           Atom Splitter Pale Ale  Pale Ale    12.0   
+1781            Saint Archer Pale Ale  Pale Ale    12.0   
+1845           Sierra Nevada Pale Ale  Pale Ale    16.0   
+1849           Sierra Nevada Pale Ale  Pale Ale    12.0   
+2153                        Surfrider  Pale Ale    16.0   
+2265                 Golden State Ale  Pale Ale    16.0   
+
+                         brewery_name             city state  
+24             21st Amendment Brewery    San Francisco    CA  
+33             21st Amendment Brewery    San Francisco    CA  
+102   Anderson Valley Brewing Company        Boonville    CA  
+118   Anderson Valley Brewing Company        Boonville    CA  
+279      Black Market Brewing Company         Temecula    CA  
+487                 Butcher's Brewing         Carlsbad    CA  
+692                 David's Ale Works  Diamond Springs    CA  
+1271        Manzanita Brewing Company           Santee    CA  
+1314           Mavericks Beer Company    Half Moon Bay    CA  
+1373                  Mission Brewery        San Diego    CA  
+1375                  Mission Brewery        San Diego    CA  
+1386                Modern Times Beer        San Diego    CA  
+1395         Monkey Paw Pub & Brewery        San Diego    CA  
+1646              Pine Street Brewery    San Francisco    CA  
+1781             Saint Archer Brewery        San Diego    CA  
+1845    Sierra Nevada Brewing Company            Chico    CA  
+1849    Sierra Nevada Brewing Company            Chico    CA  
+2153       The Dudes' Brewing Company         Torrance    CA  
+2265                 Uncommon Brewers       Santa Cruz    CA  
