@@ -33,7 +33,7 @@ def unique_val_count (df, column):
     return sort_dicti
 
 # Cojo el df combinado
-df_combine = pd.read_csv('Outputs/combine.csv')
+df_combine = pd.read_csv('Outputs/combine_code.csv')
 
 # Esta es una lista que contiene 'cosas' que quiero quitar de la columna de estilo de cerveza
 lst_cc = ['\(.+\)','American','Belgian','Baltic','Berliner','English',

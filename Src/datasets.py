@@ -2,7 +2,7 @@ import pandas as pd
 
 # Este es el dataset limpio
 df_cc = pd.read_csv ('Outputs/combine_code_cc.csv')
-df_cc.drop('Unnamed: 0', inplace = True, axis = 1)
+#df_cc.drop('Unnamed: 0', inplace = True, axis = 1)
 # Este es el data set 'scrappeado' y limpio
 df_scrapp = pd.read_csv ('Outputs/scrapp_code.csv')
 
