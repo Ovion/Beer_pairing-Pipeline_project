@@ -11,7 +11,7 @@ En este proyecto partí de dos dataset, uno con nombres, tipos, graduación... d
 Para ampliar información realicé un 'scrappeo' de una [página web de maridajes de cerveza](https://www.thebeertimes.com/maridaje-con-cerveza/). Tuve que utilizar Selenium para poder acceder a todos los datos que quería.
 
 Una vez sacados todos los datos realicé una limpieza de dichos datos, el orden de ejecución sería el siguiente:
-1. combine_dataset.py.
+1. combine_dataset.py
    En este combino los dos dataset de nombres de cerveza y cervecerías en único dataset
 2. scrapping.py
   En este otro realizo el scrapp de la página web
